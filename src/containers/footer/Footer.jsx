@@ -1,5 +1,7 @@
 import React from 'react'
 import "./footer.css"
+// import { Link } from 'react-router-dom'
+// import Contact from "../../pages/Contact"
 
 const Footer = () => {
   return (
@@ -17,22 +19,21 @@ const Footer = () => {
         </div>
         <div className="footer-links-div">
           <h4>Links</h4>
-          <p>Overons</p>
-          <p>Social Media</p>
-          <p>Counters</p>
-          <p>Contact</p>
+          <p>Home</p>
+          <p>About</p>
+          <p>IT Services</p>
+          <p>Products</p>
         </div>
         <div className="footer-links-div">
           <h4>Company</h4>
           <p>Terms & Conditions</p>
-          <p>Social Media</p>
           <p>Privacy Policy</p>
         </div>
         <div className="footer-links-div">
           <h4>Get in touch</h4>
           <p>3 Lansdowne court, Tilbury, Essex, Rm 18 7AA</p>
-          <p>01375790716</p>
-          <p>info@payme.net</p>
+          <p>+01375790716</p>
+          <p>info@zrankconsult.co.uk</p>
         </div>
       </div>
       <div className="footer-copyright">
