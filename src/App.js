@@ -1,24 +1,18 @@
-import React from 'react'
-import { Footer, Blog, Possibility, Features, WhatYAMICS, Header } from "./containers"
-import { Cta, Brand, Navbar } from "./components"
-import "./App.css"
+import { Routes, Route } from "react-router-dom";
+import { About, Blog, Contact, Landing } from "./pages";
 
 const App = () => {
   return (
-    <div className='App'>
-      <section className='gradient-bg'>
-        <Navbar />
-        <Header />
-      </section>
-      <Brand />
-      <WhatYAMICS />
-      <Features />
-      <Possibility />
-      <Cta />
-      <Blog />
-      <Footer />
+    <div className="App">
+      <Routes>
+        <Route exact path="/" element={<Landing />} />
+        <Route exact path="/about-zrank" element={<About />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/tech-news" element={<Blog />} />
+        <Route exact path="/it-services" element={<Blog />} />
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
