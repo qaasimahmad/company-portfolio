@@ -12,7 +12,7 @@ const Menu = () => (
       <Link to="/about-zrank">About</Link>
     </p>
     <p>
-      <Link>IT Services</Link>
+      <Link to="/it-services">IT Services</Link>
     </p>
     <p>
       <Link>Products</Link>

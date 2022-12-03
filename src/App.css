@@ -25,15 +25,17 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+.it-note h1,
 .contact-text h1 {
   font-family: var(--font-family);
   font-weight: 800;
-  font-size: 62px;
+  font-size: 52px;
   line-height: 75px;
   letter-spacing: -0.04rem;
 }
+.it-note p,
 .contact-text p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 27px;
   font-family: var(--font-family);
   margin-top: 1.5rem;
@@ -52,7 +54,7 @@ a {
   border-radius: 5px;
   font-family: var(--font-family);
   font-style: bold;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 27px;
   color: #fff;
   cursor: pointer;
@@ -142,6 +144,19 @@ a {
     font-size: 12px;
     line-height: 16px;
   }
+}
+
+/* It Services  */
+.it-note{
+  text-align: center;
+}
+.it-note h1{
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 75px;
+}
+.it-note p{
+  font-size: 18px;
 }
 
 .gradient-bg {
