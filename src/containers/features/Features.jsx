@@ -1,26 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Feature } from "../../components";
 import "./features.css";
 
 const featuresData = [
   {
-    title: "Improving end distrusts instantly ",
-    text: "From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.",
+    title: "Build IT",
+    text: "By outsourcing your IT, your business can access up-to-date expertise, security and applications at the same time as reducing costs.",
   },
   {
-    title: "Become the tended active",
-    text: "Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.",
+    title: "Manage IT",
+    text: "You can rest assured that your company has the right IT infrastructure and support for your needs.",
   },
   {
-    title: "Message or am nothing",
-    text: "Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.",
+    title: "Host IT",
+    text: "Our Hosting Services look after your data and services on-site. Our cloud business solutions will manage and support all aspects of your system.",
   },
   {
-    title: "Really boy law county",
-    text: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.",
+    title: "Protect IT",
+    text: "Our Security Services will protect your business from any cyber-security risks. We’ll prevent any unauthorised access to your business assets.",
   },
 ];
 const Features = () => {
+  const navigate = useNavigate();
   return (
     <div className="features section-padding" id="features">
       <div className="features-heading">
@@ -28,7 +30,7 @@ const Features = () => {
           The Future is Now and You Just Need To Realize It. Step into Future
           Today & Make it Happen.
         </h1>
-        <p>Request Early Access to Get Started</p>
+        <p style={{cursor: "pointer"}} onClick={() => navigate("/contact")}>Request a Quote</p>
       </div>
       <div className="features-container">
         {featuresData.map((item) => (
