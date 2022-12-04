@@ -23,6 +23,9 @@
   margin-top: 1.5rem;
   color: var(--color-text);
 }
+.header-content form {
+  width: 100%;
+}
 .header-content-input {
   width: 100%;
   margin: 2rem 0 1rem;

@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="footer-links-div">
           <h4>Get in touch</h4>
           <p>3 Lansdowne court, Tilbury, Essex, Rm 18 7AA</p>
-          <p>+01375790716</p>
+          <p>+4401375790716</p>
           <p>info@zrankconsult.co.uk</p>
         </div>
       </div>
