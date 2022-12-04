@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Menu = () => (
   <>
@@ -15,7 +15,7 @@ const Menu = () => (
       <Link to="/it-services">IT Services</Link>
     </p>
     <p>
-      <Link>Products</Link>
+      <Link to="/products">Products</Link>
     </p>
     <p>
       <Link to="/tech-news">Blog</Link>
@@ -25,12 +25,15 @@ const Menu = () => (
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="navbar">
       <div className="navbar-links">
         <div className="navbar-logo">
-          <h2 className="logo-text"><Link to="/">ZRANK</Link></h2>
+          <h2 className="logo-text">
+            <Link to="/">ZRANK</Link>
+          </h2>
         </div>
         <div className="navbar-links-con">
           <Menu />
@@ -40,7 +43,9 @@ const Navbar = () => {
         <p>
           <Link to="/contact">Contact</Link>
         </p>
-        <button type="button">Support</button>
+        <button onClick={() => navigate("/contact")} type="button">
+          Support
+        </button>
       </div>
       <div className="navbar-menu">
         {toggleMenu ? (

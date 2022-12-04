@@ -1,28 +1,38 @@
-import React from 'react'
-import "./footer.css"
-// import { Link } from 'react-router-dom'
-// import Contact from "../../pages/Contact"
+import React from "react";
+import "./footer.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
-    <div className='footer section-padding'>
+    <div className="footer section-padding">
       <div className="footer-heading">
-        <h1 className='gradient-text'>Discuss Your Business’s IT Needs</h1>
+        <h1 className="gradient-text">Discuss Your Business’s IT Needs</h1>
       </div>
       <div className="footer-button">
-        <p>Request a Quote</p>
+        <p onClick={() => navigate("/contact")}>Request a Quote</p>
       </div>
       <div className="footer-links">
         <div className="footer-links-logo">
-          <h2 className='logo-text'>ZRANK CONSULT LTD</h2>
-          <p>3 Lansdowne court, Tilbury, Essex, Rm 18 7AA, All Rights Reserved</p>
+          <h2 className="logo-text">ZRANK CONSULT LTD</h2>
+          <p>
+            3 Lansdowne court, Tilbury, Essex, Rm 18 7AA, All Rights Reserved
+          </p>
         </div>
         <div className="footer-links-div">
           <h4>Links</h4>
-          <p>Home</p>
-          <p>About</p>
-          <p>IT Services</p>
-          <p>Products</p>
+          <p>
+            <Link to="/">Home</Link>
+          </p>
+          <p>
+            <Link to="/about-zrank">About</Link>
+          </p>
+          <p>
+            <Link to="/it-services">IT Services</Link>
+          </p>
+          <p>
+            <Link to="/products">Products</Link>
+          </p>
         </div>
         <div className="footer-links-div">
           <h4>Company</h4>
@@ -40,7 +50,7 @@ const Footer = () => {
         <p>© 2022 ZRANK. All rights reserved.</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

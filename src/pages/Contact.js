@@ -2,8 +2,39 @@ import { Footer } from "../containers";
 import { Brand, Navbar } from "../components";
 import { BiSupport } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useFormik } from "formik";
+import { AuthContext } from "../context/AuthContext";
+import { useContext } from "react";
+import { toast } from "react-toastify";
+import { ToastContainer, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const { isMsgSubmit, setIsMsgSubmit } = useContext(AuthContext);
+  const contactFormik = useFormik({
+    initialValues: {
+      name: "",
+      companyName: "",
+      email: "",
+      tel: "",
+      message: "",
+      newsletter: false,
+      terms: false,
+    },
+    onSubmit: async (values, {resetForm}) => {
+      if (values) {
+        toast.success(
+          "We have recieved your message, we typically reply in 24 hours.",
+          {
+            position: toast.POSITION.TOP_LEFT,
+            // toastId: "Error",
+          }
+        );
+        setIsMsgSubmit(true);
+        resetForm({values: ""})
+      }
+    },
+  });
   return (
     <div className="contact">
       <section className="gradient-bg">
@@ -29,24 +60,71 @@ const Contact = () => {
         </div>
       </section>
       <section className="contact-form section-margin section-padding gradient-bg">
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Company Name" />
-          <input type="text" placeholder="Email" />
-          <input type="text" placeholder="Telephone" />
+        <form onSubmit={contactFormik.handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={contactFormik.handleChange}
+            value={contactFormik.values.name}
+            onBlur={contactFormik.handleBlur}
+          />
+          <input
+            type="text"
+            name="companyName"
+            placeholder="Company Name"
+            onChange={contactFormik.handleChange}
+            value={contactFormik.values.companyName}
+            onBlur={contactFormik.handleBlur}
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            onChange={contactFormik.handleChange}
+            value={contactFormik.values.email}
+            onBlur={contactFormik.handleBlur}
+          />
+          <input
+            type="text"
+            name="tel"
+            placeholder="Telephone"
+            onChange={contactFormik.handleChange}
+            value={contactFormik.values.tel}
+            onBlur={contactFormik.handleBlur}
+          />
           <textarea
-            name=""
+            name="message"
             id=""
             cols="30"
             rows="10"
             placeholder="Message"
+            onChange={contactFormik.handleChange}
+            value={contactFormik.values.message}
+            onBlur={contactFormik.handleBlur}
           ></textarea>
           <span>
-            <input className="checkbox" type="checkbox" name="" id="" />
+            <input
+              className="checkbox"
+              type="checkbox"
+              name=""
+              id="newsletter"
+              onChange={contactFormik.handleChange}
+              value={contactFormik.values.newsletter}
+              onBlur={contactFormik.handleBlur}
+            />
             <p>Sign me up to receive your newsletter</p>
           </span>
           <span>
-            <input className="checkbox" type="checkbox" name="" id="" />
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="terms"
+              id=""
+              onChange={contactFormik.handleChange}
+              value={contactFormik.values.terms}
+              onBlur={contactFormik.handleBlur}
+            />
             <p>
               I understand that by ticking this box and submitting this form, I
               consent to Lumina Technologies contacting me by email or phone in
@@ -54,11 +132,14 @@ const Contact = () => {
               details onto other companies or third parties.
             </p>
           </span>
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
       <Brand />
       <Footer />
+      {isMsgSubmit && (
+        <ToastContainer draggable={false} autoClose={3000} transition={Zoom} />
+      )}
     </div>
   );
 };

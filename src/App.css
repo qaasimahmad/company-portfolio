@@ -41,11 +41,13 @@ a {
   margin-top: 1.5rem;
   color: var(--color-text);
 }
+.products button,
 .contact-text button {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+.products button,
 .contact-text button,
 .contact-form button {
   width: 200px;
@@ -121,6 +123,7 @@ a {
     line-height: 24px;
   }
 
+  .products button,
   .contact-text button {
     font-size: 16px;
     line-height: 24px;
@@ -140,6 +143,7 @@ a {
     font-size: 14px;
     line-height: 24px;
   }
+  .products button,
   .contact-text button {
     font-size: 12px;
     line-height: 16px;
@@ -147,16 +151,20 @@ a {
 }
 
 /* It Services  */
-.it-note{
+.it-note {
   text-align: center;
 }
-.it-note h1{
+.it-note h1 {
   font-weight: 800;
   font-size: 42px;
   line-height: 75px;
 }
-.it-note p{
+.it-note p {
   font-size: 18px;
+}
+
+.gradient-bg {
+  background: #2b6777;
 }
 
 .gradient-bg {

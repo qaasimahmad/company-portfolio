@@ -1,8 +1,10 @@
 import { Footer } from "../containers";
 import { Brand, Navbar } from "../components";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const ItServices = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {" "}
@@ -18,7 +20,7 @@ const ItServices = () => {
             secure and you can retrieve it whenever you need, and that any
             issues are dealt with swiftly and effectively.
           </p>
-          <button>
+          <button onClick={() => navigate("/contact")}>
             Get in touch <MdKeyboardArrowRight color="#FFF" size={25} />
           </button>
         </div>
