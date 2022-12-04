@@ -27,10 +27,12 @@ const Features = () => {
     <div className="features section-padding" id="features">
       <div className="features-heading">
         <h1 className="gradient-text">
-          The Future is Now and You Just Need To Realize It. Step into Future
-          Today & Make it Happen.
+          The Future is Now and You Just Need To Realize It. Step into the
+          Future Today & Make it Happen.
         </h1>
-        <p style={{cursor: "pointer"}} onClick={() => navigate("/contact")}>Request a Quote</p>
+        <p style={{ cursor: "pointer" }} onClick={() => navigate("/contact")}>
+          Request a Quote
+        </p>
       </div>
       <div className="features-container">
         {featuresData.map((item) => (

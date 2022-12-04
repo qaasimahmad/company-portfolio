@@ -127,7 +127,7 @@ const Contact = () => {
             />
             <p>
               I understand that by ticking this box and submitting this form, I
-              consent to Lumina Technologies contacting me by email or phone in
+              consent to ZRANK consult contacting me by email or phone in
               order to process my enquiry. ZRANK consult will not pass your
               details onto other companies or third parties.
             </p>

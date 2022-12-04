@@ -28,7 +28,7 @@ const whatYAMICS = () => {
         />
         <Feature
           title="Cost"
-          text="In 2008 we adopted our managed services model, under which we offer our services for a fixed monthly cost. This helps clients control costs and maximise uptime, while also allowing us to plan our workload and optimise staffing levels."
+          text="In 2022 we adopted our managed services model, under which we offer our services for a fixed monthly cost. This helps clients control costs and maximise uptime, while also allowing us to plan our workload and optimise staffing levels."
         />
       </div>
     </div>
